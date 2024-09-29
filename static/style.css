@@ -1,0 +1,309 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Large Image Styling */
+.largeimg img {
+    width: 100%; /* Full screen width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Header Section */
+.header-section {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.logo-text-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo Styling */
+.logo-img {
+    width: 150px;
+    height: auto;
+}
+
+.title h1 {
+    font-size: 50px;
+    margin: 0;
+    color: #000000;
+}
+
+.title h2 {
+    margin: 5px 0;
+    font-size: 32px;
+    color: #0066cc;
+}
+
+.title p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Ticket Form Styling */
+.ticket-form {
+    background-color: #ffffff;
+    background-image: url('/static/Logo2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 68.5%;
+    margin: 30px auto;
+}
+
+.ticket-form form {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Help Center */
+.help-center {
+    margin-top: 50px;
+}
+
+#search-bar {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Owl and Giraffe Styling */
+.owl-container {
+    position: absolute;
+    left: -45px;
+    top: 250px;
+    z-index: 100;
+}
+
+.owl-img {
+    width: 200px;
+    height: auto;
+    transform: rotate(20deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.owl-img:hover {
+    transform: rotate(0deg) scale(1.1);
+}
+
+.gira-container {
+    position: absolute;
+    right: -10px;
+    bottom: -1087px;
+    z-index: 100;
+    display: flex;
+    align-items: flex-end;
+}
+
+.gira-img {
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gira-img:hover {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+/* FAQ Section Styling */
+.faq {
+    background-color: #faffcd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.faq-item p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #63615d;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #87b3e9;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0066cc;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.navbar li {
+    display: inline;
+    padding: 14px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: #c2daf2;
+}
+
+/* Styling for the "Submit a Ticket" Box */
+.ticket-form h2 {
+    color: #0066cc;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo-text-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .action-buttons, .navbar {
+        text-align: center;
+    }
+
+    .button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .ticket-form, .faq {
+        width: 90%;
+    }
+
+    .gira-container, .owl-container {
+        display: none;
+    }
+}
+
+h2 {
+    font-size: 30px;
+}
+
+/* Flash Messages Styling - Centered */
+.flash-messages {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it appears above other elements */
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    text-align: center;
+}
+
+/* Optional: automatically hide the flash message after a few seconds */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.flash-messages {
+    animation: fadeOut 5s ease-in-out 5s forwards;
+}

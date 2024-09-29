@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Helpdesk System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for message in messages %}
+            <div class="alert">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <!-- Header Section -->
+    <header class="header-section">
+        <div class="logo-text-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='Logo1.png') }}" alt="VeliVal School Logo" class="logo-img">
+            </div>
+            <div class="title">
+                <h1 style="font-family:Brush Script MT">VeliVal Academy</h1>
+                <h2>School Helpdesk System</h2>
+                <p>Designed for Parents, Students, and Teachers</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Large Image Section -->
+    <div class="largeimg">
+        <img src="{{ url_for('static', filename='img1.jpg') }}" alt="School Photo" class="largeimg">
+    </div>
+
+    <!-- Search Bar -->
+    <section class="help-center">
+        <h2>Help Center</h2>
+        <br>
+        <input type="text" id="search-bar" placeholder="Search for help or FAQs...">
+    </section>
+
+    <!-- Owl Image -->
+    <div class="owl-container">
+        <img src="{{ url_for('static', filename='owl1.png') }}" alt="Owl" class="owl-img">
+    </div>
+
+    <!-- Ticket Submission Form -->
+    <h2>Submit a Ticket</h2>
+    <section id="ticket-section" class="ticket-form">
+        <form action="/submit-ticket" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="role">Role:</label>
+            <select id="role" name="role" required>
+                <option value="parent">Parent</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+            </select>
+
+            <label for="issue">Describe your issue:</label>
+            <textarea id="issue" name="issue" required></textarea>
+
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority" required>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <input type="submit" value="Submit Ticket">
+        </form>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq-section" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How do I reset my password?</h3>
+            <p>This can be done by visiting the password reset page or contacting support.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Where can I view my child's progress?</h3>
+            <p>Progress reports can be found in the parent portal under the "Reports" tab.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I access learning materials?</h3>
+            <p>Learning materials are available in the "Resources" section on the dashboard.</p>
+        </div>
+    </section>
+
+    <!-- Giraffe Image -->
+    <div class="gira-container">
+        <img src="{{ url_for('static', filename='gira2.png') }}" alt="Giraffe" class="gira-img">
+    </div>
+
+    <!-- Loading Animation -->
+    <div id="loading" style="display:none;">
+        <img src="{{ url_for('static', filename='spinner.gif') }}" alt="Loading..." />
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 VeliVal Academy. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#ticket-section">Submit a Ticket</a></li>
+            <li><a href="#faq-section">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Resources</a></li>
+        </ul>
+    </nav>
+
+    <!-- Script to handle loading animation and form submission -->
+    <script>
+        document.querySelector("form").onsubmit = function() {
+            document.getElementById("loading").style.display = "block";
+        };
+    </script>
+
+</body>
+</html>
